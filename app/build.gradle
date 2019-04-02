@@ -4,6 +4,20 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'com.mob.sdk'
+
+// 在MobSDK的扩展中注册SMSSDK的相关信息
+MobSDK {
+    appKey "2aa8abf69a18f"
+    appSecret "8e8543b746831d63bf59606e74bae720"
+
+    SMSSDK {
+        gui false
+        version "3.2.1"
+    }
+}
+
+
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -30,4 +44,14 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    //Rxjava+Retrofit+Gson搭建网络框架
+    implementation 'com.google.code.gson:gson:2.6.2'
+    implementation 'io.reactivex:rxjava:1.1.6'
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    //圆形图标
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
 }

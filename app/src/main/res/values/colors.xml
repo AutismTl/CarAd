@@ -3,4 +3,28 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="item_common_pressed">#e0e0e0</color>
+    <color name="common_btn_color">#dff9fa</color>
+
+    <color name="background_common">#fafafa</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="gray">#FFDBDBDB</color>  <!-- 灰白 -->
+    <color name="transparent">#00000000</color>  <!-- 透明 -->
+
+
+    <color name="textColor_black">#646262</color> <!-- 黑色 -->
+
+
+    <color name="themecolor_1">#0099FF</color> <!-- 主题色 -->
+    <color name="themecolor_2">#8dcddf</color>
+    <color name="themecolor_3">#96c8ab</color>
+    <color name="themecolor_4">#bfbbe2</color>
+
+    <color name="light_grey">#adadad</color> <!-- 浅灰 -->
+    <color name="medium_grey">#808080</color> <!-- 中灰 -->
+    <color name="dull_grey">#404040</color> <!-- 深灰-->
+    <color name="bg_grey">#efefef</color> <!-- 大灰底-->
+    <color name="line_grey">#dbdbdb</color> <!-- 分割线 -->
 </resources>

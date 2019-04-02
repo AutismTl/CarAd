@@ -44,6 +44,7 @@ abstract class BaseActivity : Activity() {
      */
     private val isDebug = true
     private val APP_NAME = "ControlHelper"
+    private var lastClick: Long = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -226,12 +227,11 @@ abstract class BaseActivity : Activity() {
      * @return
      */
     protected fun fastClick(): Boolean {
-        var lastClick: Long = 0
         if (System.currentTimeMillis() - lastClick <= 1000) {
-            return false
+            return true
         }
         lastClick = System.currentTimeMillis()
-        return true
+        return false
     }
 
 }
