@@ -5,7 +5,6 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.os.*
 import android.text.Editable
-import android.text.TextUtils
 import android.text.TextWatcher
 import cn.smssdk.EventHandler
 import cn.smssdk.SMSSDK
@@ -23,11 +22,11 @@ import kotlinx.android.synthetic.main.activity_login.*
  */
 class LoginActivity : BaseActivity() {
 
-    var isDelete = false
-    var lastContentLength = 0
-    var isFirstEdit = true
-    var isTicking = false
-    var phone: String = ""
+    private var isDelete = false
+    private var lastContentLength = 0
+    private var isFirstEdit = true
+    private var isTicking = false
+    private var phone: String = ""
 
     override fun initParms(parms: Bundle?) {
 
@@ -88,10 +87,11 @@ class LoginActivity : BaseActivity() {
         }
 
         login_enter.setOnClickListener {
-            val code = login_psw.text.toString()
+            /*val code = login_psw.text.toString()
             if (!fastClick() && !TextUtils.isEmpty(code)) {
                 SMSSDK.submitVerificationCode("86", phone, login_psw.text.toString())
-            }
+            }*/
+            startActivity(DriverVerifyActivity::class.java)
         }
 
         login_phone.setOnFocusChangeListener { v, hasFocus ->
@@ -137,7 +137,7 @@ class LoginActivity : BaseActivity() {
                     return
                 val sb = StringBuffer(s)
                 //是否为输入状态
-                isDelete = if (s.length > lastContentLength) false else true
+                isDelete = s.length <= lastContentLength
                 //输入是第4，第9位，这时需要插入空格
                 if (!isDelete && (s.length == 4 || s.length == 9)) {
                     if (s.length == 4) {

@@ -58,7 +58,7 @@ public class CommonUtils {
                     int[] location = new int[2];
                     scroll.getLocationInWindow(location);
                     int srollHeight = (location[1] + scroll.getHeight()) - rect.bottom + 3;
-                    main.scrollTo(0, srollHeight);
+                    main.scrollTo(0, srollHeight + 20);
                 } else {
                     main.scrollTo(0, 0);
                 }

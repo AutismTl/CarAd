@@ -18,9 +18,10 @@
 
 
     <color name="themecolor_1">#0099FF</color> <!-- 主题色 -->
-    <color name="themecolor_2">#8dcddf</color>
+    <color name="themecolor_2">#000000</color>
     <color name="themecolor_3">#96c8ab</color>
     <color name="themecolor_4">#bfbbe2</color>
+    <color name="themecolor_text">#ffffff</color>
 
     <color name="light_grey">#adadad</color> <!-- 浅灰 -->
     <color name="medium_grey">#808080</color> <!-- 中灰 -->
